@@ -12,14 +12,19 @@
 </head>
 
 <body class="bg-dark text-white container">
+    <button id="modeToggleBtn" class="btn btn-secondary">Toggle Mode</button>
 
 
     <header>
         <h2>Portfolio</h2>
-        <p>Hello, I’m a Programmer, I make applications using JavaScript, Python, Bash, C#. Web Applications is my specialty given the remarkable level of adaptability those have. I develop static, dynamic, and API-based applications.
+        <p>Hello, I’m a Programmer, I make applications using JavaScript, Python, Bash, C#. Web Applications is my
+            specialty given the remarkable level of adaptability those have. I develop static, dynamic, and API-based
+            applications.
         </p>
         <p>
-            I'm experienced in developing applications that work smoothly on various operating systems, from Windows 11/10/7/XP to Linux distributions like Mint, Ubuntu, Kali, Arch, and even Android. I can easily understand and modify code to make sure it runs seamlessly across these platforms.
+            I'm experienced in developing applications that work smoothly on various operating systems, from Windows
+            11/10/7/XP to Linux distributions like Mint, Ubuntu, Kali, Arch, and even Android. I can easily understand
+            and modify code to make sure it runs seamlessly across these platforms.
         </p>
         <p> Here are some projects that I have made:</p>
     </header>
@@ -29,7 +34,7 @@
         <section>
             <h3 class="text-center"> Online Projects</h3>
             <ul id="onlineProjectsList" class="list-group">
-      
+
 
             </ul>
             <br>
@@ -61,13 +66,13 @@
             { url: "ticTacToeHTML", title: "Tic Tac Toe" },
             { url: "audioAnalyzer", title: "Audio Analyzer" },
             { url: "jp", title: "Japanse Learning Games" },
-            {url: "screenCalulator", title:"Screen Calculator"},
-            {url:"stopwatch", title: "Stop Watch"},
-            {url:"ProQr", title:"ProQR", path: "/caDupli-master/files/JSON/consult.html"},
-            {url: "strings", title:"Edit Strings"},
-            
+            { url: "screenCalulator", title: "Screen Calculator" },
+            { url: "stopwatch", title: "Stop Watch" },
+            { url: "ProQr", title: "ProQR", path: "/caDupli-master/files/JSON/consult.html" },
+            { url: "strings", title: "Edit Strings" },
+
             // { url: "", title: "" },
-           
+
         ];
 
         let projectsOffline = [
@@ -78,7 +83,7 @@
 
         for (let onlineProject of projectsGitPages) {
             let path = "";
-            if(onlineProject.path){
+            if (onlineProject.path) {
                 path = onlineProject.path;
             }
 
@@ -86,14 +91,29 @@
             const li = document.createElement("li");
             const a = document.createElement("a");
             const span = document.createElement("span");
-            a.innerText = `https://j-m-c-b.github.io/${onlineProject.url+path}`;
-            a.href = `https://j-m-c-b.github.io/${onlineProject.url+path}`;
-            span.innerHTML = onlineProject.title  + ": ";
+            a.innerText = `https://j-m-c-b.github.io/${onlineProject.url + path}`;
+            a.href = `https://j-m-c-b.github.io/${onlineProject.url + path}`;
+            span.innerHTML = onlineProject.title + ": ";
             li.classList.add("list-group-item", "bg-dark");
             li.appendChild(span);
             li.appendChild(a);
             onlineProjectsList.appendChild(li);
         }
+    </script>
+    <script>
+        // Function to toggle between light and dark modes
+        function toggleMode() {
+            const body = document.body;
+            body.classList.toggle('light-mode');
+            body.classList.toggle('dark-mode');
+        }
+
+        // Set the default mode to dark
+        document.body.classList.add('dark-mode');
+
+        // Event listener for the mode toggle button
+        const modeToggleBtn = document.getElementById('modeToggleBtn');
+        modeToggleBtn.addEventListener('click', toggleMode);
     </script>
 
 </body>
