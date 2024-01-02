@@ -94,9 +94,11 @@
 
         for (let onlineProject of projectsGitPages) {
             const li = document.createElement("li");
-            li.href = onlineProject.url;
-            li.innerHTML = onlineProject.url;
+            const a = document.createElement("a");
+            a.href = onlineProject.url;
+            a.innerHTML = onlineProject.url;
             li.classList.add(["list-group-item", "bg-dark"]);
+            li.appendChild(a);
             onlineProjectsList.appendChild(li);
         }
     </script>
