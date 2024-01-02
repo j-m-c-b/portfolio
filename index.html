@@ -25,31 +25,7 @@
     <main>
         <section>
             <h3 class="text-center"> Online Projects</h3>
-            <ul id="onlineProjectsList" class="list-group">
-                <li class="list-group-item bg-dark">QR Maker <a target="_blank"
-                        href="https://j-m-c-b.github.io/qrmaker/">https://j-m-c-b.github.io/qrmaker/</a>
-                </li>
-                <li class="list-group-item bg-dark">Todo List (Vue.js) <a target="_blank"
-                        href="https://j-m-c-b.github.io/todo/">https://j-m-c-b.github.io/todo/</a>
-                </li>
-                <li class="list-group-item bg-dark">Products Calculator <a target="_blank"
-                        href="https://j-m-c-b.github.io/productCalculator/">https://j-m-c-b.github.io/productCalculator/</a>
-                </li>
-                <li class="list-group-item bg-dark">Tic Tac Toe <a target="_blank"
-                        href="https://j-m-c-b.github.io/ticTacToeHTML/">https://j-m-c-b.github.io/ticTacToeHTML/</a>
-                </li>
-                <li class="list-group-item bg-dark">Audio Analyzer <a target="_blank"
-                        href="https://j-m-c-b.github.io/audioAnalyzer/">https://j-m-c-b.github.io/audioAnalyzer/</a>
-                </li>
-                <li class="list-group-item bg-dark"> Cas <a target="_blank" href="https://j-m-c-b.github.io/cas/">
-                        https://j-m-c-b.github.io/cas/</a></li>
-                <li class="list-group-item bg-dark"> Make Quiz <a target="_blank"
-                        href=" https://j-m-c-b.github.io/makeQuiz/">
-                        https://j-m-c-b.github.io/makeQuiz/</a></li>
-
-                <li class="list-group-item bg-dark">Japanse Learning Games <a target="_blank"
-                        href="https://j-m-c-b.github.io/jp/index.html">https://j-m-c-b.github.io/jp/index.html</a>
-                </li>
+          
 
             </ul>
             <br>
@@ -96,7 +72,7 @@
             const li = document.createElement("li");
             const a = document.createElement("a");
             const span = document.createElement("span");
-            a.href = onlineProject.url;
+            a.innerText = onlineProject.url;
             a.innerText = `https://j-m-c-b.github.io/${onlineProject.url}`;
             span.innerHTML = onlineProject.title;
             li.classList.add(["list-group-item", "bg-dark"]);
