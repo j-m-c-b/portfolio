@@ -94,7 +94,7 @@
             a.innerText = `https://j-m-c-b.github.io/${onlineProject.url + path}`;
             a.href = `https://j-m-c-b.github.io/${onlineProject.url + path}`;
             span.innerHTML = onlineProject.title + ": ";
-            li.classList.add("list-group-item");
+            li.classList.add("list-group-item", "bg-dark");
             li.appendChild(span);
             li.appendChild(a);
             onlineProjectsList.appendChild(li);
@@ -104,17 +104,22 @@
 
         function toggleMode() {
             const body = document.body;
-            if (body.classList.contains('bg-dark') && body.classList.contains('text-white') ) {
-               
+            if (body.classList.contains('bg-dark') && body.classList.contains('text-white')) {
+
                 body.classList.remove('bg-dark');
                 body.classList.remove('text-white');
-                
-            } 
-          
+                const listItems = document.querySelectorAll('li');
+
+                // Loop through each list item and remove the "bg-dark" class
+                for (const listItem of listItems) {
+                    listItem.classList.remove('bg-dark');
+                }
+            }
+
         }
 
 
-     
+
 
 
         const modeToggleBtn = document.getElementById('modeToggleBtn');
