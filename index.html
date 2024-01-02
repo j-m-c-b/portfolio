@@ -75,14 +75,17 @@
         const onlineProjectsList = document.querySelector("#onlineProjectsList");
 
         for (let onlineProject of projectsGitPages) {
-         
+            let path = "";
+            if(onlineProject.path){
+                path = onlineProject.pah;
+            }
 
 
             const li = document.createElement("li");
             const a = document.createElement("a");
             const span = document.createElement("span");
-            a.innerText = `https://j-m-c-b.github.io/${onlineProject.url}`;
-            a.href = `https://j-m-c-b.github.io/${onlineProject.url}`;
+            a.innerText = `https://j-m-c-b.github.io/${onlineProject.url+path}`;
+            a.href = `https://j-m-c-b.github.io/${onlineProject.url+path}`;
             span.innerHTML = onlineProject.title  + ": ";
             li.classList.add("list-group-item", "bg-dark");
             li.appendChild(span);
