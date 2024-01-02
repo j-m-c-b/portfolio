@@ -95,9 +95,12 @@
         for (let onlineProject of projectsGitPages) {
             const li = document.createElement("li");
             const a = document.createElement("a");
+            const p = document.createElement("p");
             a.href = onlineProject.url;
-            a.innerHTML = onlineProject.url;
+            a.innerText = `https://j-m-c-b.github.io/${onlineProject.url}`;
+            p.innerHTML = onlineProject.title;
             li.classList.add(["list-group-item", "bg-dark"]);
+            li.appendChild(p);
             li.appendChild(a);
             onlineProjectsList.appendChild(li);
         }
