@@ -101,17 +101,22 @@
         }
     </script>
     <script>
-        
+
         function toggleMode() {
             const body = document.body;
-            body.classList.toggle('light-mode');
-            //body.classList.toggle('dark-mode');
+            if (body.classList.contains('bg-dark') && myElement.classList.contains('text-white') ) {
+               
+                body.classList.remove('bg-dark');
+                body.classList.remove('text-white');
+                
+            } 
+          
         }
 
-      
+
         document.body.classList.add('dark-mode');
 
-   
+
         const modeToggleBtn = document.getElementById('modeToggleBtn');
         modeToggleBtn.addEventListener('click', toggleMode);
     </script>
