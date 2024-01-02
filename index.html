@@ -61,6 +61,9 @@
             { url: "ticTacToeHTML", title: "Tic Tac Toe" },
             { url: "audioAnalyzer", title: "Audio Analyzer" },
             { url: "jp", title: "Japanse Learning Games" },
+            {url: "screenCalulator", title:"Screen Calculator"},
+            {url:"stopwatch", title: "Stop Watch"},
+            {url:"ProQr", title:"ProQR", path: "/caDupli-master/files/JSON/consult.html"},
          // { url: "", title: "" },
            
         ];
@@ -72,6 +75,9 @@
         const onlineProjectsList = document.querySelector("#onlineProjectsList");
 
         for (let onlineProject of projectsGitPages) {
+         
+
+
             const li = document.createElement("li");
             const a = document.createElement("a");
             const span = document.createElement("span");
