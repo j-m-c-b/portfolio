@@ -120,6 +120,17 @@
                 for (const listItem of listItems) {
                     listItem.classList.remove('bg-dark');
                 }
+                modeToggleBtn.textContent = "Dark Mode";
+            }else{
+                body.classList.add('bg-dark');
+                body.classList.add('text-white');
+                const listItems = document.querySelectorAll('li');
+
+                // Loop through each list item and add the "bg-dark" class
+                for (const listItem of listItems) {
+                    listItem.classList.add('bg-dark');
+                }
+                modeToggleBtn.textContent = "Light Mode";
             }
 
         }
