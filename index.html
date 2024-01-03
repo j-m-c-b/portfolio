@@ -16,7 +16,11 @@
 
 
     <header>
+        
         <h2>Portfolio</h2>
+        <p > <a target="_blank"
+            href="https://j-m-c-b.github.io/portfolio/">https://j-m-c-b.github.io/portfolio/</a> </p>
+            
         <p>Hello, I’m a Programmer, I make applications using JavaScript, Python, Bash, C#. Web Applications is my
             specialty given the remarkable level of adaptability those have. I develop static, dynamic, and API-based
             applications.
@@ -32,17 +36,20 @@
 
     <main>
         <section>
-            <h3 class="text-center"> Online Projects</h3>
+        
+            <h3 class="text-center"> GitHub Pages Projects</h3>
             <ul id="onlineProjectsList" class="list-group">
 
 
             </ul>
             <br>
             <section>
-                <h3> Offline Projects</h3>
+                <h3> Other Projects</h3>
                 <ul class="list-group">
                     <li class="list-group-item bg-dark">FFmpeg Scripts <a target="_blank"
                             href="https://github.com/j-m-c-b/ffmpeg">https://github.com/j-m-c-b/ffmpeg</a> </li>
+                    <li class="list-group-item bg-dark" title="Servidor para la gestión de pacientes en un clínica">Servicio De Urgencias <a target="_blank"
+                            href="https://github.com/j-m-c-b/servicioDeUrgencias">https://github.com/j-m-c-b/servicioDeUrgencias</a> </li>
 
                 </ul>
             </section>
@@ -60,9 +67,9 @@
 
     <script>
         let projectsGitPages = [
-            { url: "qrmaker", title: "QR Image Maker",description: "Type text that will be converted to a QR image" },
+            { url: "qrmaker", title: "QR Image Maker", description: "Type text that will be converted to a QR image" },
             { url: "todo", title: "Todo List" },
-            { url: "productCalculator", title: "Products Calculator", path: "?toggle=n", description : "add, multiply and subtract products" },
+            { url: "productCalculator", title: "Products Calculator", path: "?toggle=n", description: "add, multiply and subtract products" },
             { url: "ticTacToeHTML", title: "Tic Tac Toe" },
             { url: "audioAnalyzer", title: "Audio Analyzer" },
             { url: "jp", title: "Japanse Learning Games" },
@@ -87,7 +94,7 @@
             if (onlineProject.path) {
                 path = onlineProject.path;
             }
-         
+
 
 
             const li = document.createElement("li");
@@ -121,7 +128,7 @@
                     listItem.classList.remove('bg-dark');
                 }
                 modeToggleBtn.textContent = "Dark Mode";
-            }else{
+            } else {
                 body.classList.add('bg-dark');
                 body.classList.add('text-white');
                 const listItems = document.querySelectorAll('li');
